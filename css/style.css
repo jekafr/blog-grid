@@ -1,1 +1,126 @@
-d
+*{
+	box-sizing: border-box;
+}
+html{
+  font-size: 12px;
+}
+body{
+  font-family: hans_kendrick_3regular, sans-serif;
+  color: #1d1d1d;
+  margin: 0;
+  padding-top: 5.625vw;
+  font-size: 1rem;
+  background-color: #e2e7ec;
+}
+@font-face {
+    font-family: 'hans_kendrick_3regular';
+    src: url('../fonts/hanskendrick-regular-webfont.woff2') format('woff2'),
+         url('../fonts/hanskendrick-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.visually-hidden{
+   position: absolute !important;
+   clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+   clip: rect(1px, 1px, 1px, 1px);
+   padding:0 !important;
+   border:0 !important;
+   height: 1px !important;
+   width: 1px !important;
+   overflow: hidden;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+img{
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+}
+.container{
+	max-width: 1140px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+.row{
+	display: flex;
+  flex-wrap: wrap;
+	margin: 0 -10px;
+}
+.col{
+	padding: 0 10px;
+  margin-bottom: 20px;
+  display: flex;
+}
+.article{
+  width: 100%;
+  background-color: #FFF;
+}
+.article__title{
+ line-height: 1.3636;
+ text-transform: uppercase;
+ font-size: 1.275rem;
+  margin: 0 0 2.06666em;
+}
+.article__time{
+  text-transform: uppercase;
+  font-size: 0.8123rem;
+  line-height: 2.3;
+  color: #818181;
+}
+.article_big{
+  position: relative;
+  flex-grow: 1;
+}
+.article_big:before{
+  content: "";
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(transparent, rgba(0,0,0,1));
+}
+.article_big .article__info{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 15px 20px;
+}
+.article__title_big{
+  font-size: 1.875rem;
+  color: #FFF;
+  line-height: 1.2;
+}
+.article__info{
+  padding: 0 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.author__img{
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+
+
+
+@media screen and (min-width: 1023px) {
+  html{
+    font-size: 16px;
+  }
+.col{
+  width: 33.3333%;
+}
+.col_big{
+  width: auto;
+  flex-grow: 1;
+}
+}
