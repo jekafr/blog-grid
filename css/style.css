@@ -12,6 +12,7 @@ body{
   font-size: 1rem;
   background-color: #e2e7ec;
 }
+
 @font-face {
     font-family: 'hans_kendrick_3regular';
     src: url('../fonts/hanskendrick-regular-webfont.woff2') format('woff2'),
@@ -29,6 +30,9 @@ body{
    height: 1px !important;
    width: 1px !important;
    overflow: hidden;
+}
+h2 a{
+  font-weight: bold;
 }
 a{
   text-decoration: none;
@@ -61,12 +65,12 @@ img{
 .article__title{
  line-height: 1.3636;
  text-transform: uppercase;
- font-size: 1.275rem;
-  margin: 0 0 2.06666em;
+ font-size: 1.375rem;
+ margin-bottom: 2.0666em;
 }
 .article__time{
   text-transform: uppercase;
-  font-size: 0.8123rem;
+  font-size: 0.8126rem;
   line-height: 2.3;
   color: #818181;
 }
@@ -87,40 +91,99 @@ img{
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
-  padding: 0 15px 20px;
+  width: 70%;
+  padding: 0 0 20px 40px;
 }
 .article__title_big{
   font-size: 1.875rem;
   color: #FFF;
   line-height: 1.2;
+  margin: 0;
 }
 .article__info{
   padding: 0 15px 20px;
+  margin-top: 0.68rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
-
+.author{
+  padding: 0 0 20px 15px;
+}
 .author__img{
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
+h2.article__title.article__title_big {
+    margin: 0;
+}
+@media screen and (min-width: 768px) {
+   html {
+      font-size: 16px;
+   }
+   .col {
+      width: 50%;
+      min-height: 33.75rem;
+   }
+   .col_big {
+      flex-basis: 100%;
+      height: 100%;
+      flex-grow: 1;
+   }
+   .article-author {
+      position: absolute;
+      bottom: 3%;
+   }
+   .article {
+      position: relative;
+      height: 100%;
+   }
 
-
-
+   .article__info {
+      margin-top: 1.68rem;
+   }
+   .article__big .article__info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 70%;
+      padding: 0 0 20px 40px;
+   }
+   .article__title {
+      margin-bottom: 3.0666em;
+   }
+   .article_big {
+      min-height: 33.75rem;
+   }
+   .article__img__cover {
+      min-height: 33.75rem;
+   }
+}
 
 @media screen and (min-width: 1023px) {
+
   html{
     font-size: 16px;
   }
 .col{
   width: 33.3333%;
+  min-height: 33.75rem;
 }
 .col_big{
   width: auto;
   flex-grow: 1;
+  flex-basis: 66.04%;
+}
+.article{
+  position: relative;
+  height: 100%;
+}
+.article__title {
+  margin-bottom: 3.0666em;
+}
+.article__info {
+  margin-top: 1.68rem;
 }
 }
